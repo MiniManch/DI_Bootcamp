@@ -1,0 +1,114 @@
+/*setting up font*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+/*giving body full cpacity of the screen*/
+body{
+	height: 100%;
+	width:100%;
+	margin:0;
+	font-family: 'Raleway', sans-serif;
+}
+
+#main_section{
+	display: flex;
+	position:relative;
+	justify-content: center;
+	height:80vh;
+	width: 60vw;
+	background-color: whitesmoke;
+	margin:auto;
+	margin-top: 10vh;
+}
+
+#main_section>div{
+	width:50%;
+	height:100%;
+}
+
+#form>form>section>input{
+	display: block;
+	width:20vw;
+	height: 5vh;
+	margin-bottom:2vh;
+}
+#gradient{
+	background-image: linear-gradient(purple,black)
+}
+
+#form{
+	positon:relative;
+	height:100%;
+	width:100%;
+}
+
+form{
+	position: absolute;
+	top:8%;
+	left:10%;
+}
+
+form>h1{
+	margin-left: 5vw;
+	font-size: 3em;
+}
+
+form>div{
+	display: inline-flex;
+	margin-top: 0;
+}
+
+form>div>p:last-child{
+	margin-left: 2vw;
+
+}
+
+a{
+	color:black;
+	text-decoration: none;
+}
+
+button{
+	display: block;
+	color:white;
+	background-color: mediumpurple;
+	margin: auto;
+	border:none;
+	border-radius:50px;
+	font-size: 18px;
+	height: 7vh;
+	width: 18vw;
+}
+
+#other_ways{
+	position:relative;
+	margin-top: 3vh;
+	display: inline-flex;
+
+	height:20vh;
+	width:20vw;
+}
+
+#other_ways>span{
+	width: 5vw;
+	border-bottom:2px solid black;
+	position: absolute;
+	margin:auto;
+}
+
+#other_ways>span:first-child{
+	top:1vh;
+	left:1vw;
+}
+
+#other_ways>span:last-child{
+	top:1vh;
+	right:1vw;
+}
+
+#or{
+	font-size: 13px;
+	position: absolute;
+	right:7vw;
+	margin:0;
+}
+
+
