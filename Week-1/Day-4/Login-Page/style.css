@@ -30,8 +30,12 @@ body{
 	height: 5vh;
 	margin-bottom:2vh;
 }
+
 #gradient{
-	background-image: linear-gradient(purple,black)
+	background-image: linear-gradient(purple,black);
+	position:relative;
+	color:white;
+	text-align: center;
 }
 
 #form{
@@ -66,11 +70,17 @@ a{
 	text-decoration: none;
 }
 
+input::placeholder{
+	padding-left: 1vw;
+}
+
+
 button{
 	display: block;
 	color:white;
 	background-color: mediumpurple;
 	margin: auto;
+	margin-right:15vw;
 	border:none;
 	border-radius:50px;
 	font-size: 18px;
@@ -82,8 +92,7 @@ button{
 	position:relative;
 	margin-top: 3vh;
 	display: inline-flex;
-
-	height:20vh;
+	height:10vh;
 	width:20vw;
 }
 
@@ -111,4 +120,36 @@ button{
 	margin:0;
 }
 
+#other_img{
+	margin-top: 0px;
+	position: absolute;
+	left:3vw;
+	top:60vh;
+}
+#other_img>img{
+	height: 5vh;
+	width: 2vw;
+	margin-left: 1vw;
+}
 
+#gradient>img{
+	height:20vh;
+	width:15vw;
+	position:absolute;
+	left:8vw;
+	top:10vh;
+}
+
+#gradient>h1{
+	margin-top: 35vh;
+	margin-bottom: 0;
+}
+
+#register{
+	border:1px solid white;
+	border-radius: 50px;
+	width:50%;
+    margin-left:7vw;
+	background-color: transparent;
+
+}
