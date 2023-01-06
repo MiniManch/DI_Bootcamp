@@ -1,0 +1,91 @@
+body{
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+nav{
+	height: 5vh;
+	background-color: lightgray;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	margin-top: 0;
+	top:0;
+	z-index: 1;
+}
+
+nav>a{
+	color: grey;
+	margin-left:10vw;
+	margin-top: 1vh;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav>button{
+	background-color: lightblue;
+	border-radius: 25%;
+	border: none;
+	margin-right: 5vw;
+}
+
+header{
+	position: absolute;
+	text-align: center;
+	margin-top:2vh;
+	height:70vh;
+	background-image: url("background.jpg");
+	background-size: stretch;
+	background-repeat: no-repeat;
+	width:100%;
+
+}
+
+header>h2{
+	margin-top: 20vh;
+}
+
+header>button{
+	background-color: lightblue;
+	border-radius:10px;
+	border: none;
+	padding: 10px;
+	
+}
+
+header>input{
+	border-radius:10px;
+	height:4vh;
+	width:15vw;
+	border: none;
+}
+
+header>input::placeholder{
+	padding:3px;
+}
+
+section{
+	display: flex;
+	height:500px;
+	width:100%;
+	position: absolute;
+	top:72vh;
+	background-color:lightgray ;
+}
+
+section>div:first-child{
+	margin-left: 30%;
+}
+
+section>div{
+	margin-top: 10vh;
+	width:15%;
+	height:50%;
+	text-align: center;
+}
+
+div>i {
+	display: inline-block;
+}
