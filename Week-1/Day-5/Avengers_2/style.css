@@ -77,3 +77,45 @@ footer{
 .footer>li{
 	margin-bottom: 20px;
 }
+
+/*media queries*/
+
+/*Extra Large*/
+
+@media screen and (min-width: 1200px){
+	nav{
+		background-color: black;
+		color: white;
+	}
+}
+
+/*Large*/
+@media screen and (min-width: 992px){
+	nav{
+		background-color: red;
+		color:white;
+	}
+	section{
+		display: inline-flex;
+	}
+}
+/*Medium*/
+@media screen and (min-width: 768px){
+	h1{
+		font-size: 25px;
+	}
+	nav{
+		background-color: yellow;
+	}
+}
+/*Small*/
+@media screen and (max-width: 600px){
+	h1{
+		font-size: 35px;
+	}
+	nav{
+		background-color: yellow;
+		color:black;
+	}
+}
+
