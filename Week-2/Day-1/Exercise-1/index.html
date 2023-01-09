@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercise 1</title>
+	<style>
+		body{
+			height:100%;
+			width: 100%;
+			margin:0;
+		}
+		#container{
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		#container>div{
+			background-color: blue;
+			height:100px;
+			width: 200px;
+		}
+		#container>div:first-child{
+			flex-grow: 1;
+			align-self: center;
+			background-color: red;
+		}
+		#container>div:last-child{
+			background-color: yellow;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="container">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	
+</body>
+</html>

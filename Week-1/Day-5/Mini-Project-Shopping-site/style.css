@@ -174,13 +174,14 @@ button{
 
 .image_div:hover > .hover_items{
 	display: inline-block;
+
 	height:5vh;
 	width: 5vh;
 	margin-top: 16vh;
 	transition: all 0.2s;
 }
 
-.hover_items:hover {
+.hover_items:hover { 
 	background-color:#16A085;
 	color:white;
 }

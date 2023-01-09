@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+body{
+	height:100vh;
+	width:100vw;
+	margin:0;
+	background-image: url("Images/background.jpg");
+	background-size: cover;
+	background-repeat: repeat-y;
+	font-family: 'Raleway', sans-serif;
+}
+header{
+	height:50%;
+	width:100%;
+	text-align: center;
+}
+
+
+#header_container{
+	display:flex;
+	height:20%;
+	margin-left:15vw ;
+	gap:1vw;
+}
+
+.header_item{
+	height:100%;
+	width:25%;
+}
+
+.header_item>h1{
+	color:#626fc6;
+	font-size: 3em;
+}
+
+.header_item>p{
+	font-size:12px;
+	font-weight: bold;
+}
+
+main{
+	height:50vh;
+	width:100%;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-bottom: 1vh;
+	display: grid;
+	grid-template-columns: repeat(24, 1fr);
+	grid-template-rows: repeat(24, 1fr);
+}
+
+#f_s{
+	grid-column:1/8 ;
+	grid-row: 1/20;
+	background-color: red;
+}
+
+#m_s{
+	grid-column: 9/16;
+	grid-row:4/24 ;
+	background-color: blue;
+}
+
+#l_s{
+	grid-column: 17/24;
+	grid-row:2/22 ;
+	background-color: purple;
+}
+
+main>section{
+	text-align: center;
+	position: relative;
+}
+
+h5{
+	margin-bottom: 0;
+}
+
+h5 + p{
+	margin-top: 0.5vh;
+}
+
+.para:first-child{
+	background-color: white;
+	color:purple;
+	height:50%;
+}
+
+.para>p{
+	padding:2vh;
+	margin-top: 0;
+}
+
+.image{
+	position:absolute;
+	left:40%;
+	bottom:30%;
+	background-color: green;
+	width:6vw;
+	height:12vh;
+	border-radius: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.founder_s>div:last-child{
+	margin-top: 9vh;
+}
+
+#f_i{
+	background-image: url("Images/f_i.jpg")
+}
+
+#m_i{
+	background-image: url("Images/m_i.jpg")
+}
+
+#l_i{
+	background-image: url("Images/l_i.jpg")
+}
+
+
+@media (max-width:929px){
+	#header_container{
+		height:100vh;
+		flex-direction: column;
+		justify-content: space-around;
+		gap:1vh;
+	}
+	.header_item{
+		height:30%;
+		width:100%;
+	}
+	main{
+		margin-top: 80vh;
+		display: flex;
+		flex-direction: column;
+		gap:5vh;
+	}
+
+	.image{
+		left:2vw;
+		bottom:5vh;
+		width:20vw;
+	}
+	.founder_s>div:last-child{
+		margin-top: 5vh;
+	}
+
+}

@@ -52,7 +52,7 @@ header>button{
 	border-radius:10px;
 	border: none;
 	padding: 10px;
-	
+
 }
 
 header>input{
@@ -64,6 +64,7 @@ header>input{
 
 header>input::placeholder{
 	padding:3px;
+	padding-left: 8px;
 }
 
 section{
