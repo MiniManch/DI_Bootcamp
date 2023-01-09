@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+
+body{
+	height:100%;
+	width:100%;
+	margin:0;
+ 	font-family: 'Raleway', sans-serif;
+ 	background-image: url(Images/background.jpg);
+ 	background-size: cover;
+ 	background-repeat: repeat-y;
+ 	text-transform: uppercase;
+ 	font-weight: bold;
+}
+nav{
+	text-align: center;
+	width:100%;
+	position: fixed;
+	top: 0;
+	margin:0;
+	margin-bottom: 1vh;
+	background-color: #32676d;
+	color:white;
+	z-index: 1;
+}
+
+nav>button,nav>p{
+	display: inline-block;
+}
+
+button{
+	padding:10px;
+	background-color: #00a1d8;
+	color:white;
+	border-radius: 5px;
+	margin-left: 5vw;
+	border: none;
+}
+
+main{
+	color:white;
+	margin-top:20vh;
+	text-align: center;
+}
+
+main>h1{
+	margin-bottom: 10vh;
+}
+
+a{
+	text-decoration: none;
+}
+
+form{
+	position: absolute;
+	display:flex;
+	flex-direction: column;
+	gap:2vh;
+	left:30%;
+	height:100%;
+	width:100%;
+}
+section{
+	width:100%;
+}
+
+.full_input{
+	display: flex;
+	gap:1vw;
+}
+
+.full_input>div{
+	margin:0;
+}
+
+input{
+	display: inline-block;
+}
+
+label{
+	display: block;
+}
+
+#input4{
+	flex-direction: column;
+	width:50%;
+}
+
+#input4>ul{
+	width: max-content;
+	display: block;
+	margin-top: 0;
+}
+
+#input4>p{
+	width: max-content;
+	margin-bottom: 0.5vh;
+}
+#input4>select{
+	width:41%;
+}
+select{
+	width: 100%;
+	margin-left: 0;
+}
+
+#input5>label{
+	display: inline-block;
+}
+
+section+button{
+	margin-top: 5vh;
+	margin-left: 10vw;
+	width:max-content;
+}
