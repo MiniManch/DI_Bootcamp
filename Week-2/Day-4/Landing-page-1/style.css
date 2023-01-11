@@ -5,7 +5,6 @@ body{
 }
 
 .navbar{
-	background-color: none;
 	width:100%;
 }
 
@@ -27,15 +26,9 @@ body{
 	gap:1.5vw;
 }
 
-
 #title{
 	display:inline-block;
 	margin-top: 30vh;
-	filter: brightness(100%);
-}
-
-.background>button{
-	display: b;
 }
 
 .main{
