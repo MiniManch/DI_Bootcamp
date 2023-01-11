@@ -1,0 +1,54 @@
+body{
+	height:100%;
+	width:100%;
+	margin:0;
+}
+
+.navbar{
+	background-color: none;
+	width:100%;
+}
+
+.background{
+	height:100vh;
+	width:100vw;
+	display: inline-block;
+	background-image: url("Images/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+}
+
+.nav-links{
+	width:30vw;
+	flex-direction: row;
+	gap:1.5vw;
+}
+
+
+#title{
+	display:inline-block;
+	margin-top: 30vh;
+	filter: brightness(100%);
+}
+
+.background>button{
+	display: b;
+}
+
+.main{
+	height:50vh;
+	width:100vw;
+}
+
+.row{
+	height:100%;
+	width:100%;
+}
+
+svg{
+	margin-left:25%;
+	margin-bottom:1vh;
+}
