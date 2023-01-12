@@ -1,0 +1,249 @@
+/*importing font from google */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
+
+/*setting body to full width, no margin, and setting the font for the whole page*/
+body{
+	height:100%;
+	width:100%;
+	margin:0;
+	font-family: 'Quicksand', sans-serif;
+}
+
+/*Setting background of the navbar to transparent, later when hovering over other stuff we wiill change that.*/
+.navbar{
+/*	background-color:rgba(255, 255, 255, 0.2);*/
+	top:2vh;
+	transition: all 1s;
+}
+
+/*changing nav link stuff*/
+.nav-link{
+	font-weight: 600;
+}
+/*adding my icon that I made online*/
+.mano_icon{
+	height:50px;
+	width:40px;
+}
+
+/*setting header image*/
+header{
+	background-image: url("Images/background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	height:100vh;
+	width:100vw;
+	transition: all 2s;
+}
+
+/*Changing the photo to a more dark one to change the opacity without changing opacity of child tags*/
+header:hover{
+	background-image: url("Images/background_d.jpg");
+}
+
+/*Placing the text in the center, also the button, and changing color on hover  */
+header>div{
+	position: absolute;
+	left:35vw;
+	top:15vh;
+	transition:all 1s;
+}
+
+header>div>button{
+/*	margin-left:5vw;*/
+}
+
+header:hover div{
+	color:white;
+}
+
+header:hover + nav{
+	color:white;
+	background-color:rgba(255, 255, 255, 0.4);
+}
+
+nav:hover{
+	background-color:rgba(255, 255, 255, 0.4);
+}
+
+/*photo*/
+
+/*Header*/
+section{
+	position:relative;
+}
+#photo_div{
+	display:flex;
+	justify-content: space-around;
+	height:60vh;
+	width: 50vw;
+	margin:10vh auto ;
+	margin-bottom:0;
+
+}
+
+#photo_div>img{
+	margin-top:2vh;
+	margin-right:3vh;
+	height:80%;
+	width:60%;
+	border:1px solid white;
+	border-radius:70%;
+	padding:0;
+	box-shadow: 20px 20px 40px grey;
+}
+
+#photo_div>div>h1{
+	margin-top:0;
+	margin-bottom: 0;
+	font-size:40px;
+	font-weight: 300;
+}
+
+#above_h1{
+	margin-bottom:1vh;
+	color:grey;
+	opacity: 0.8;
+	text-transform: italic;
+}
+
+#under_h1{
+	margin-top:2vh;
+	margin-left:3vw;
+}
+
+/*Image gallery*/
+#carouselExampleRide{
+	display: block;
+	margin-left: 20vw;
+	height:50vh;
+	width:60vw;
+}
+
+/*changing placement of title of gallery*/
+section + h3{
+	margin-left: 20vw;
+}
+
+/*adding link to the summary next to my name*/
+#under_h1>a{
+	color:black;
+}
+
+/*Blog part*/
+/*Placing title*/
+#blog_title{
+	position: absolute;
+	width:max-content;
+	left:20vw;
+	top:250vh;
+}
+/*Placing the container*/
+#blog_title + .container{
+	margin-top: 30vh;
+	margin-left: 19vw;
+}
+
+/*Chaning size and layout of the cards*/
+#blog_title + .container>.row>.col-md-4{
+	width:5vw;
+	margin-right: 15vw;
+}
+
+/*changing image size inside the card*/
+
+.card-img-top{
+	height: 250px;
+	width:100%;
+}
+
+/*arraning the team photos*/
+
+
+.team_container{
+	height:30vh;
+	width:100%;
+	margin-left:9vw;
+}
+
+#team_title{
+	width:max-content !important;
+	margin-left: 20vw;
+	margin-top:7vh;
+}
+
+#team_title + .container>.row{
+	height:100%;
+	width:100%;
+}
+
+.item_team{
+	height:100%;
+	width:20%;
+	margin-left: 10vw;
+
+}
+
+.team_img1{
+	background-image: url("Images/Faces/face1.jpg");
+	height:100%;
+	width:100%;
+}
+
+.team_img2{
+	background-image: url("Images/Faces/face2.jpg");
+	height:100%;
+	width:100%;
+}
+.team_img3{
+	background-image: url("Images/Faces/face3.jpg");
+	height:100%;
+	width:100%;
+}
+
+/*Working on the info under each photo.*/
+.team_p1{
+	margin-bottom: 0;
+	text-align: center;
+	background-color: black;
+	color:white;
+	border-bottom-left-radius: 100px;
+}
+
+.team_p2{
+	text-align: right;
+}
+
+/*styling hr*/
+hr{
+	margin-top: 10vh;
+}
+
+/*Styling contact*/
+
+#contact{
+	margin-left:19vw;
+}
+
+#contact_form{
+	width:40%;
+}
+
+.contact_title{
+	margin-left: 19vw;
+	margin-bottom: 5vh;
+}
+/*footer*/
+
+footer{
+	display: inline-flex;
+	justify-content: center;
+	height:7vh;
+	width:100%;
+}
+
+footer>span>a>img{
+	margin-top: 1vh;
+	margin-left:3vh;
+	height: 5vh;
+}
