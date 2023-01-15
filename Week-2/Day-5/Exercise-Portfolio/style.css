@@ -163,7 +163,7 @@ section + h3{
 .team_container{
 	height:30vh;
 	width:100%;
-	margin-left:9vw;
+	margin-left:16vw;
 }
 
 #team_title{
@@ -179,8 +179,8 @@ section + h3{
 
 .item_team{
 	height:100%;
-	width:20%;
-	margin-left: 10vw;
+	width:25%;
+	margin-left: 3vw;
 
 }
 
@@ -188,17 +188,23 @@ section + h3{
 	background-image: url("Images/Faces/face1.jpg");
 	height:100%;
 	width:100%;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .team_img2{
 	background-image: url("Images/Faces/face2.jpg");
 	height:100%;
 	width:100%;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .team_img3{
 	background-image: url("Images/Faces/face3.jpg");
 	height:100%;
 	width:100%;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 /*Working on the info under each photo.*/
