@@ -44,3 +44,22 @@ console.log('Printing 3rd letter of Money Heist',`${myWatchedSeries[2]}`.substr(
 
 // 6
 console.log(myWatchedSeries);
+
+// Exercise 3
+let tempCelsius = 30;
+let tempFarenheit = tempCelsius * 1.8 + 32;
+console.log('Printing temperatures.',`${tempCelsius}°C is ${tempFarenheit} `);
+
+// Exercise 4
+// What will be the outcome of a + b in the first expression ?
+// Prediction: 34 + 21 = 55.
+
+// What will be the outcome of a + b in the second expression ?
+// Prediction: 2 + 21 = 23.
+
+// What is the value of c?
+// Prediction: undefined.
+let c;
+console.log(c);
+
+
