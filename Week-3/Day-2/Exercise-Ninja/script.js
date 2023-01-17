@@ -40,16 +40,16 @@ console.log(myList);
 
 // Exercise 3
 // This works but gives the index by letter in a string.
-let sentence = prompt('please enter a sentence which has the word Nemo in it ! make sure to seperate each word with a single space');
-if (sentence.includes('Nemo')) {
-	console.log(sentence.indexOf('Nemo'));
+// let sentence = prompt('please enter a sentence which has the word Nemo in it ! make sure to seperate each word with a single space');
+// if (sentence.includes('Nemo')) {
+// 	console.log(sentence.indexOf('Nemo'));
 
-} else{
-	console.log(sentence,'this aint working');
-}
+// } else{
+// 	console.log(sentence,'this aint working');
+// }
 
-// let sentence = [prompt('please enter a sentence which has the word Nemo in it ! make sure to seperate each word with a single space').split(' ')];
-// console.log('Exercise 3: ',sentence,`I found Nemo at ${sentence.lastIndexOf('Nemo')}`);
+let my_list = prompt('please enter a sentence which has the word Nemo in it ! make sure to seperate each word with a single space').split(' ');
+console.log('Exercise 3: ',my_list,my_list[0],`I found Nemo at ${my_list.lastIndexOf('Nemo')}`);
 // Will ask Gaston cause this shit should work!!
 
 // Exercise 4
