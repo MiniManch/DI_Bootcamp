@@ -23,3 +23,4 @@ if (isNaN(zipCode)) {
 }else if (zipCode.toString().length < 5 || zipCode.toString().length > 5){
 	console.log('are you sure this is a correct zipcode mate?');
 }
+
