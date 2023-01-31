@@ -43,7 +43,7 @@ function newOrRandom(){
         findThatWord = getRandomWord(wordArray);
     }else if(question.toLowerCase() === 'my own'){
         findThatWord = prompt('Please enter your word! remember it has to be minimum 8 letters!');
-        while (isNaN(Number(findThatWord)) != true || findThatWord === '' || findThatWord.length < 8 ) {
+        while (isNaN(Number(findThatWord)) != true || findThatWord.length < 8 ) {
             findThatWord = prompt('try again! Please enter your word! remember it has to be minimum 8 letters!')
         }
     }

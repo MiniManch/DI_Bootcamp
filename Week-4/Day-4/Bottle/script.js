@@ -8,7 +8,7 @@
 
 //     -> then, Take _2_ down, pass them around
 //     -> we have now 96 bottles
-
+*
 //     -> then, Take _3_ down, pass them around
 //     -> we have now 93 bottles
 
