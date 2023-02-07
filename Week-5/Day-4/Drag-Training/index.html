@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<script defer type="text/javascript" src="script.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
+
+</head>
+<body>
+	<h2>HTML DRAG AND DROP DEMO</h2>
+
+<div 
+	ondrop="dragDrop(event)"
+	ondragover="allowDrop(event)"
+	id="box"
+>
+  
+<!-- In the HTML  -->
+	<div id="square1" draggable="true" ondragstart="dragStart(event)">
+		square1
+	</div>
+	<div
+		id="square2"
+		draggable="true" 
+     	ondragstart="dragStart(event)"
+	>
+		square2
+	</div>
+
+	<div id="square3"
+		ondrop="dragDrop(event)"
+		ondragover="allowDrop(event)"
+		draggable="true"
+		ondragstart="dragStart(event)"
+	>
+		square3
+	</div>
+</div>
+</body>
+</html>
