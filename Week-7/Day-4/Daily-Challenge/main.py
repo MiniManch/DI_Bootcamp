@@ -4,9 +4,9 @@
 
 
 def five_divided_by_zero():
-  try:
-    print(5 / 0)
-  except ZeroDivisionError:
-    raise Exception('Division by zero is illegal ')
+    try:
+        print(5 / 0)
+    except ZeroDivisionError:
+        print('cannot do that')
 
 five_divided_by_zero()
