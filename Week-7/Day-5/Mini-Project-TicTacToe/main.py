@@ -83,6 +83,8 @@ def play_a_turn(turn,choice_1,choice_2):
     for choice in choice_2:
         if choice in all_choices:
             all_choices.remove(choice)
+    if len(all_choices) == 0:
+        return False
     while True:
         string_list = ','.join(all_choices)
         choice = input(f'Please enter your choice for this turn! you can choose: \n turns available: {string_list} \n')
@@ -94,9 +96,12 @@ def play_a_turn(turn,choice_1,choice_2):
                 choice_2.append(choice)
                 break
 
+
     return choice_1,choice_2
 
 def check_if_win(choice_1,choice_2):
+    if len(choice_1) < 3 and len(choice_2)< 3:
+       return False,''
     if len(choice_1) > 2:
         # check line win
         for index, item in enumerate(choice_1):
@@ -122,7 +127,6 @@ def check_if_win(choice_1,choice_2):
                 return True,'Player one'
             elif 'm_r' in choice_1 and 'm_m' in choice_1 and 'm_l' in choice_1:
                 return True,'Player one'
-
     if len(choice_2) > 2:
         for index, item in enumerate(choice_2):
             # check line win
@@ -146,8 +150,9 @@ def check_if_win(choice_1,choice_2):
                 return True,'Player two'
             elif 'm_r' in choice_2 and 'm_m' in choice_2 and 'm_l' in choice_2:
                 return True,'Player two'
-    else:
-        return False,''
+
+    return False , ''
+
 
 def time_to_play():
     if not wanna_play():
@@ -175,6 +180,8 @@ def time_to_play():
         else:
             print(f'{player_two} goes now')
         choices = play_a_turn(turn,choice_1,choice_2)
+        if choices == False:
+            break
         choice_1 = choices[0]
         choice_2 = choices[1]
         print(choices)
@@ -183,6 +190,9 @@ def time_to_play():
         winner = player_one
     else:
         winner = player_two
-    print(f'winner winner chicken dinner \n congrats {winner}')
+    if win[0] == True:
+        print(f'winner winner chicken dinner \n congrats {winner}')
+    else:
+        print('No more moves! try again :)')
 
 time_to_play()
