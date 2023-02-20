@@ -5,7 +5,7 @@ def wanna_play():
         #for some reason when I did while user_want != 'no' or 'yes' it just entered the loop anyway, so this way works 100%
         user_want = input('Wanna play some tic tac toe? \n enter yes to play and no to stop! \n').lower()
         if user_want == 'yes' :
-            user_want = True
+            user_want = True # you can just do return True rather than adding the break each time
             break
         elif  user_want == 'no':
             user_want = False
@@ -89,6 +89,7 @@ def check_if_win(choice_1,choice_2):
     if len(choice_1) < 3 and len(choice_2)< 3:
        return False,''
     if len(choice_1) > 2:
+        # do you remember what we explained regardign  the comments? for each comment you can take the corresponding code and extract it to function
         # check line win
         if 't_l' in choice_1 and 't_m' in choice_1 and 't_r' in choice_1:
             return True,'Player one'
