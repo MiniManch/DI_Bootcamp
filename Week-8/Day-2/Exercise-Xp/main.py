@@ -105,3 +105,58 @@ class Zoo:
   def new_animal(self,animal:str):
     if animal not in self.animals:
       self.animals.append(animal)
+  # Create a method called get_animals that prints all the animals of the zoo.
+  def get_animals(self):
+    if len(self.animals) > 0:
+      for animal in self.animals:
+        print(animal)
+    else:
+      print(' We have no animals, its an empty zoo')
+  # Create a method called sell_animal that takes one parameter animal_sold. 
+  # This method removes the animal from the list and of course the animal needs to exist in the list.
+  def sell_animal(self,animal:str):
+    if animal in self.animals:
+      self.animals.remove(animal)
+      print(f'{animal} was sold!')
+    else:
+      print('We dont have that animal mister')
+  # Create a method called sort_animals that sorts the animals alphabetically and groups them together based on their first letter.
+  def sort_animals(self):
+    animals_sorted= sorted(self.animals)
+    animal_Dict  = {}
+    i = 1
+    for index,animal in enumerate(animals_sorted):
+      first_letter_list = []
+      if index+1 == len(animals_sorted):
+        first_letter_list.append(animal)
+        animal_Dict[i] = first_letter_list
+        break
+      else:
+        first_letter = animal[0]
+        for index,animal in enumerate(animals_sorted):
+          if animal[0] == first_letter:
+            first_letter_list.append(animal)
+        if first_letter_list not in animal_Dict.values():
+          animal_Dict[i] = first_letter_list
+          i+=1
+    return animal_Dict
+  # Create a method called get_groups that prints the animal/animals inside each group.
+  def get_groups(self):
+    groups = list(self.sort_animals().values())
+    print(groups)
+    for index,group in enumerate(groups):
+      i = index+1
+      print(f'group {i} has : ')
+      for animal in group:
+        print(animal)
+      
+Ramat_gan = Zoo('Ramat-Gan')
+Ramat_gan.new_animal('Iguana')
+Ramat_gan.new_animal('Cougar')
+Ramat_gan.new_animal('Cat')
+Ramat_gan.new_animal('Bear')
+Ramat_gan.new_animal('Baboon')
+Ramat_gan.new_animal('Bat')
+
+Ramat_gan.get_groups()
+  
