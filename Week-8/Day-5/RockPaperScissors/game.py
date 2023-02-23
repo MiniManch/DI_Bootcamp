@@ -21,10 +21,10 @@ class Game:
     if self.user_move == self.computer_move:
       self.results['draw'] += 1
       return 'OH! its a draw'
-    elif  self.user_move + self.computer_move in self.wins:
+    elif  self.user_move + self.computer_move in self.wins: # this elif is redundant, change it to if
       self.results['win'] += 1
       return 'you win!'
-    else:
+    else: # there is no need for this else
       self.results['loss'] += 1
       return 'you lose'
 
