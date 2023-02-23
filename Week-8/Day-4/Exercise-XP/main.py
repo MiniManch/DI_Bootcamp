@@ -67,7 +67,7 @@ class Dog:
 
     if power_dog_1 > power_dog_2:
       return self.name
-    elif power_dog_2 > power_dog_1:
+    elif power_dog_2 > power_dog_1: # the elif is redundant change it to else
       return other_dog.name
 
 dog_1 = Dog('shlomi',4,5)
