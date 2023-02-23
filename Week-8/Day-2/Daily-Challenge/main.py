@@ -5,7 +5,7 @@ class Farm:
     self.name = name
     self.animals = animals
       
-  def add_animal(self,name:str,num:int = 1):
+  def add_animal(self,name:str,num:int = 1): # you can make this function in just a single line: self.animals[name] = self.animals.get(name, 0) + num
     if name in self.animals.keys():
         self.animals[name] += num  
     else:
@@ -18,7 +18,7 @@ class Farm:
         print(f'{animal} : {self.animals[animal]} \n')
       else:
         print(f'{animal} : {self.animals[animal]} ')
-    print('    E-I-E-I-O')
+    print('    E-I-E-I-O') # you can use \t rather than the spaces
 
   def get_animal_types(self):
     animal_types = sorted(list(self.animals.keys()))
