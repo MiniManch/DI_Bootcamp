@@ -67,7 +67,26 @@ class Mage(Character):
   def castspell(self,other_char):
     attack = self.health/self.attack
     other_char.health -= attack
-    print(f'{self.name} just cast a spell 🌪 \n {other_char}\'s health just decreased by {attack}')
+    print(f'{self.name} just cast a spell 🌪 \n {other_char.name}\'s health just decreased by {attack}')
 
   def help(self):
     return f' {self.name} You can Cast a spell(a), summon a monster(b), or curse(c) the enemy!'
+
+
+def choose_char():
+  char_list = ['Mage','Warrior','Druid']
+  player_list = ['player_1','player_2']
+
+  for index,player in enumerate(player_list):
+    player_name = input('Hey there, please choose a name \n')
+    player_char = input(f'Hey {player_name}, please choose a Character! (Mage,Warrior or Druid) \n').lower().capitalize()
+    while player_char not in char_list:
+      player_char = input(f'Hey {player_name}, please choose a Character! (Mage,Warrior or Druid) \n').lower().capitalize()
+    player_list[index] = {player:[player_name,player_char]}
+  return player_list
+
+def game():
+  player_list = choose_char()
+
+game()
+  
