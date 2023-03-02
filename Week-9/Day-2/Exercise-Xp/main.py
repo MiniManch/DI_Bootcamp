@@ -8,7 +8,7 @@ class Trial_class:
     return abs(self.value)
     
   def __int__(self):
-    if int(self.value):
+    if int(self.value): # you can make it one line like: return int(self.value). and __init__ must return int and not boolan as you did
       return True
     return False
     
@@ -50,7 +50,7 @@ class Currency:
   def __add__(self, other):
     if type(other) == int:
       return self.amount + other
-    elif type(other) == type(self):
+    elif type(other) == type(self): # again change it to just if because we do return at line before 
       if self.currency != other.currency:
         raise Exception('Cannot add up different currencies')
       else:
@@ -60,7 +60,7 @@ class Currency:
   def __iadd__(self, other):
     if type(other) == int:
       self.amount += other
-    elif type(other) == type(self):
+    elif type(other) == type(self): 
       if self.currency != other.currency:
         raise Exception('Cannot add up different currencies')
       else:
