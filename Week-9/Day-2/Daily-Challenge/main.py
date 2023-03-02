@@ -4,7 +4,7 @@ class Circle:
   
   def __init__(self, radius_or_diameter: dict):
     keys = list(radius_or_diameter.keys())
-    if 'radius' in keys and 'diameter' not in keys:
+    if 'radius' in keys and 'diameter' not in keys: # try to use the classmethod to do that
       self.radius = radius_or_diameter['radius']
       self.diameter = self.radius * 2
       print(self.radius,self.diameter)
@@ -38,7 +38,7 @@ class Circle:
     return new_circle
 
   def __gt__(self, other):
-    if self.radius > other.radius:
+    if self.radius > other.radius: # you can just make it one line: return self.radius > other.radius --> please do the change at all the places
       return True
     return False
 
