@@ -4,7 +4,7 @@ class Person:
     self.hate_list = []
     self.love_list = []
     i = 0
-    while True:
+    while True: # please export it to function
       if i == 2:
         break
       elif i == 0:
