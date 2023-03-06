@@ -6,8 +6,8 @@ def check_type(blood_type):
     blood_type = input(f"Please choose your blood type: {' '.join(blood_types)} \n ").capitalize()
   return blood_type
 
-def get_queue(queue_obj):
-        Queue_list = []
+def get_queue(queue_obj): # this should be inside the queue class as the encapsolation principle
+        Queue_list = [] # the variable name should be lower case
         for person in queue_obj.humans:
          Queue_list.append(person.name)
         return Queue_list  
@@ -31,7 +31,7 @@ class Human:
     self.family     = []
     print(self.id,self.name,self.age,self.priority,self.blood_type,self.family)
 
-  def add_family_member(self,person):
+  def add_family_member(self,person): # there is a bug at this function, le'ts say that we have the following: member A, B, C for A his family member is B and we add C as family member to A then we need to add it also to B
     self.family.append(person)
     person.family.append(self)
     print(f'{self.name} and {person.name} live in the same house')
@@ -60,10 +60,10 @@ class Queue:
 
   def swap_places(self,person_1:Human, person_2:Human):
     if person_1 in self.humans and person_2 in self.humans:
-      index_1 = self.humans.index(person_1)
+      index_1 = self.humans.index(person_1) #I'm not sure it's working
       index_2 = self.humans.index(person_2)
 
-      self.humans[index_1] = person_2
+      self.humans[index_1] = person_2 # you can make it one line like: self.humans[index_1], self.humans[index_2] = person_2, person_1
       self.humans[index_2] = person_1
       
       Queue_list = get_queue(self)
@@ -77,7 +77,7 @@ class Queue:
       person = self.humans[0]
       self.humans.remove(person)
       return person.name
-    else:
+    else: # this else is redundant you can remove it because one line before you do return
       return None
 
   def get_next_blood_type(self,type):
