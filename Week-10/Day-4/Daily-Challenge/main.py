@@ -23,13 +23,13 @@ class readThatText:
 # a method that returns the most common word in the text.
   def most_common(self):
     all_freq = {}
-    for word in self.stripped_str:
+    for word in self.stripped_str: # you can use the frequency method
         if word in all_freq:
             all_freq[word] += 1
         else:
             all_freq[word] = 1
-    all_freq = sorted(all_freq.items(),key = lambda x:x[1], reverse = True)
-    self.all_freq = all_freq
+    all_freq = sorted(all_freq.items(),key = lambda x:x[1], reverse = True) # you can optimize this function by storing in a vaiable the most commont word at the for loop
+    self.all_freq = all_freq # you can do that at the init just once 
     return all_freq[0:5]
     
 # a method that returns a list of all the unique words in the text.
