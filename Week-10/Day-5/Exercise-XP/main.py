@@ -1,6 +1,7 @@
 # pip install requests
 import requests
 import time
+# there is a lot of duplication code, so we can export this to function
 before = time.time()
 response = requests.get("https://www.google.com/?safe=active&ssui=on")
 after = time.time()
