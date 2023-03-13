@@ -1,0 +1,5 @@
+<p class="lead"><h3>Description :</h3>
+<p><img alt="" src="https://developers.institute/wp-content/uploads/2020/10/a0935a0d-212b-472a-b07c-57e196071945.gif" /> </p>
+<p>Git is the version control tech of choice for basically everybody right now, from developers to designers. GitHub is the social code-hosting platform that’s currently used more than any other. It’s a place where you can play and experiment all your code that you will do during the Bootcamp. It’s also a place where you can find (and play around with) the most incredible open-source information, emerging technologies, features, and designs. You will use everyday at Developers Institute. GitHub is your best friend !</p>
+<p><br></p>
+<hr />
