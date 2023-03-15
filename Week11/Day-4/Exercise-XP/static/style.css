@@ -1,0 +1,26 @@
+.category{
+	list-style-type: circle;
+	color:red;
+}
+
+.category_list_container{
+	width: 60vw;
+	margin-left: 25%;
+}
+
+.category{
+	cursor: pointer;
+}
+
+.about-home{
+	margin-left: 20%;
+}
+
+header{
+	margin-left: 10vh;
+	width:50vw;
+}
+
+.details{
+	width:100% !important;
+}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title%} 
+homepage 
+{% endblock %}
+
+{% block button %}
+<a href="{{url_for('products')}}"><button class="btn btn-primary btn-lg" type="button">go to our shop!</button></a>
+{% endblock %}
+
+{% block content %}
+<div class = 'about-home '>
+<h2>About</h2>
+<p>We have products in all these categories</p>
+</div>
+<div class="row category_list_container">
+    <ul class='col-4 list-group'>
+        {% for category in categories1 %}
+        <li class = 'category list-group-item'>{{category}}</li>
+        {% endfor %}
+    </ul>
+    <ul class='col-4 list-group'>
+        {% for category in categories2 %}
+        <li class = 'category list-group-item'>{{category}}</li>
+        {% endfor %}
+    </ul>
+</div> 
+
+{% endblock %} 
