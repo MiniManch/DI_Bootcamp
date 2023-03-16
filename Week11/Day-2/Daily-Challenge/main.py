@@ -49,7 +49,7 @@ def home_page():
 # /exercises will render the exercises.md file
 @app.route('/lesson')
 def lesson_page():
-	return flask.render_template('in-this-chapter.md')
+	return flask.render_template('in-this-chapter.md') # inorder to see the template redered well you need to user the markdown package
 
 
 # /lesson will render the in-this-chapter.md file.
