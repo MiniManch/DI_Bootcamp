@@ -38,19 +38,19 @@ class Druid(Character):
 
   def meditate(self):
     self.health += 10
-    print(f'{self.name} meditated 🧎‍ hes calm now, and his health has increased by 10 ✨')
+    print(f'{self.name} meditated 🧎‍ hes calm now, and his health has increased by 10 ✨\n')
 
   def animal(self):
     self.attack += 5
-    print(f'{self.name} has used Animal Help 🐾 his attack has increased by 5')
+    print(f'{self.name} has used Animal Help 🐾 his attack has increased by 5\n')
 
   def drain(self,other_char):
     attack = self.health * 0.75 + self.attack * 0.75
     other_char.health -= attack
-    print(f'{self.name} has deal {attack} amount of damage on {other_char.name} 💢')
+    print(f'{self.name} has deal {attack} amount of damage on {other_char.name} 💢\n')
 
   def help(self):
-    return f' {self.name} You can use -attack-, -drain-, get an -animal- to help you, or -meditate-'
+    return f' {self.name} You can use -attack-, -drain-, get an -animal- to help you, or -meditate-\n'
 
 
 class Warrior(Character):
@@ -60,25 +60,25 @@ class Warrior(Character):
 
   def __init__(self,name):
     super().__init__(name)
-    print('Im a warrior 👨‍🎤 this will be easy!')
+    print('Im a warrior 👨‍🎤 this will be easy!\n')
 
   def brawl(self,other_char):
     other_char.health -= self.attack * 2
     self.health += self.attack * 0.5
-    print(f'{other_char.name} has been dealt {self.attack * 2} damage! 💢')
-    print(f'and {self.name} health has increased by {self.attack * 0.5}')
+    print(f'{other_char.name} has been dealt {self.attack * 2} damage! 💢\n')
+    print(f'and {self.name} health has increased by {self.attack * 0.5}\n')
 
   def train(self):
     self.health += 2
     self.attack += 2
-    print(f'{self.name} used train. 🏋️‍ his attack and health are now increased by 2!')
+    print(f'{self.name} used train. 🏋️‍ his attack and health are now increased by 2!\n')
 
   def intimidate(self,other_char):
     other_char.attack -= 3
-    print(f'{self.name} just flashed his muscles 🦾 theyre so big, that {other_char.name} damage has decreased by 3')
+    print(f'{self.name} just flashed his muscles 🦾 theyre so big, that {other_char.name} damage has decreased by 3\n')
 
   def help(self):
-    return f' {self.name} you can try and -intimidate- the enemy,-train- to increase your strength, simply -attack-, or try get in a -brawl-'
+    return f' {self.name} you can try and -intimidate- the enemy,-train- to increase your strength, simply -attack-, or try get in a -brawl-\n'
 
 
 class Mage(Character):
@@ -87,23 +87,23 @@ class Mage(Character):
   move_on_enm = ['curse','cast']
   def __init__(self,name):
     super().__init__(name)
-    print('being a mage 🧙‍ I can forsee exactly how this battle will pan out!')
+    print('being a mage 🧙‍ I can forsee exactly how this battle will pan out!\n')
     
   def curse(self,other_char):
     other_char.attack -= 2
-    print(f'{self.name} cursed {other_char.name}  \n {other_char.name} is insulted 🥺. his attack has decrseased by 2')
+    print(f'{self.name} cursed {other_char.name}  \n {other_char.name} is insulted 🥺. his attack has decrseased by 2\n')
 
   def summon(self):
     self.attack += 3
-    print(f'{self.name} has summoned a monster 👹 \n he can attack exactly +3 harder now')
+    print(f'{self.name} has summoned a monster 👹 \n he can attack exactly +3 harder now\n')
 
   def cast(self,other_char):
     attack = self.health/self.attack
     other_char.health -= attack
-    print(f'{self.name} just cast a spell 🌪 \n {other_char.name}\'s health just decreased by {attack}')
+    print(f'{self.name} just cast a spell 🌪 \n {other_char.name}\'s health just decreased by {attack}\n')
 
   def help(self):
-    return f' {self.name} You can -Cast- a spell, -summon- a monster,attack or -curse- the enemy!'
+    return f' {self.name} You can -Cast- a spell, -summon- a monster,attack or -curse- the enemy!\n'
 
 def choose_char():
   char_list = [Mage,Warrior,Druid]
@@ -161,7 +161,8 @@ def check_win(player_list):
 def game():
   player_list = choose_char()
   turn = first_turn(player_list)
-  while not check_win(player_list):
+  win = check_win(player_list)
+  while not win:
     if turn == 0:
       other_char = 1
     elif turn ==1:
@@ -174,22 +175,27 @@ def game():
     char   = player_list[turn]['Char']
     other_char = player_list[other_char]['Char']
 
-    print('other',char)
     choice = play(turn,player_list,attack,health,name,char)
     if choice == 'attack':
-      eval(f'{char}.basic_attack({other_char})')
-    if choice in type(char).move_on_enm:
-      eval(f'{char}.{choice}({other_char})')
+      func = getattr(char,'basic_attack')
+      func(other_char)
+
+    elif choice in type(char).move_on_enm:
+      func = getattr(char,f'{choice}')
+      func(other_char)
     else:
-      exec(f'{char}.{choice}()')
+      func = getattr(char,f'{choice}')
+      func()
 
     if turn == 0:
       turn = 1
     elif turn == 1:
       turn = 0
-
-
-  return choice
+    win = check_win(player_list)
+  for player in player_list:
+    if player['Char'].health > 0 :
+      winner = player['Name']
+  return f'Winner is: {winner}'
 
 print(game())
   
