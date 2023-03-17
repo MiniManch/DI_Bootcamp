@@ -23,10 +23,6 @@ class Character:
   def info(self):
     return {'Health':self.health,'Attack':self.attack}
 
-  # @classmethod
-  # def __str__(cls):
-  #   return cls.class_name
-
 class Druid(Character):
   class_name = 'Druid'
   move_list  = ['help','meditate','animal_help','drain','attack']
@@ -133,8 +129,6 @@ def choose_char():
     player_list[index] = player
   return player_list
 
-
-# change turns decide who starts, perhaps make it logical based on char type
 def first_turn(player_list):
   this_char  = player_list[0]['Char']
   other_char = player_list[1]['Char']
@@ -143,7 +137,6 @@ def first_turn(player_list):
     return 0
   return random.randint(0,1)  
 
-# if health is 0 winner is declared
 def play(turn,player_list,attack,health,name,char):  
   print(f'{name} its your turn! \n you have Attack of:{attack} and Health of {health}')
   choice = input(f"{name}\n {char.help()} \n").lower()
