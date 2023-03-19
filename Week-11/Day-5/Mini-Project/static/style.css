@@ -1,0 +1,35 @@
+.myheader{
+	width: 100vw ;
+	height: 30vh;
+}
+.myheader_text{
+	padding-top: 3vh;
+}
+
+.product_img{
+	height:15vh;
+	width:10vw;
+}
+
+.about-home{
+	margin-left: 35%;
+	
+	margin-top: 5vh;
+}
+
+.category_list_container{
+	width: 60vw;
+}
+
+.category{
+	cursor: pointer;
+}
+
+.total{
+	display: inline-block;
+	margin-left: 5vw;
+}
+
+.del{
+	width:fit-content;
+}
