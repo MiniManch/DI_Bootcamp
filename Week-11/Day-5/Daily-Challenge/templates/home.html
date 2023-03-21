@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="btn-group" role="group" >
+  {% for poke_type in poke_types %}
+  <a href="{{url_for('pokemon_type',pokemon_type = poke_type.lower())}}">
+  	<button type="button" class="btn btn-danger">{{poke_type}}</button>
+  </a>
+  {% endfor %}
+
+</div>
+<a href="{{url_for('all_pokemon',page_num = 0)}}">
+    <button type="button" class="btn btn-success">all pokemon!</button>
+  </a>
+{% endblock %}

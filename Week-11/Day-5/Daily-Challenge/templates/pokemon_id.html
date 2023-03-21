@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card pokemon_card">
+  <img src="{{pokemon['sprites']['front_default']}}" class="card-img-top pokemon_image" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{pokemon['name']}}</h5>
+  </div>
+</div>
+
+{% endblock %}
