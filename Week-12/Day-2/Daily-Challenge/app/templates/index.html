@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+	<title>Document</title>
+</head>
+<body>
+	{% if form.name.data %}
+	<div id = 'cv' class= {{user_class}}>
+	<h1>{{form.name.data}}</h1>
+	<p> {{form.age.data}}</p>
+	<p>{{form.email.data}}</p>	
+	<p>{{form.experience.data}}</p>
+	</div>
+	<a id='purple'><button>Purple</button></a>
+	<a id='yellow'><button>Yellow</button></a>
+	<a id='black'><button>Black</button></a>
+	<a id='white'><button>White</button></a>
+	{% else %}
+
+	<form method="POST" action="#">
+    {{ form.hidden_tag() }}
+    {{ form.name.label}} {{ form.name(size=20)}}
+    <br>
+    {{ form.age.label}} {{ form.age()}}
+    <br>
+    {{ form.experience.label}} {{ form.experience()}}
+    <br>
+    {{ form.email.label }} {{ form.email() }}
+
+    <br>
+    {{form.submit()}}
+    {% endif %}
+    
+</form>
+<script>
+	let purple = document.getElementById('purple')
+	let	white = document.getElementById('white')
+	let	yellow = document.getElementById('yellow')
+	let	black = document.getElementById('black')
+	let my_div = document.querySelector('#cv')
+
+	let my_buttons = [purple,white,black,yellow]
+	for(let button of my_buttons){
+		console.log(button)
+		button.addEventListener("click", function(){
+			console.log('clicked')
+			my_div.className = button.textContent.toLowerCase()
+		})
+	}
+
+</script>
+</body>
+</html>
