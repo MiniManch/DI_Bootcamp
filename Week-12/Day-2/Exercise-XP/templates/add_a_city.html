@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if form.name.data %}
+<h1>Thanks for adding {{form.name.data}}!</h1>
+{% else %}
+
+<form class='add_my_city_form' method="POST" action="#">
+    {{ form.hidden_tag()}}
+    {{ form.name.label(class="form-label")}}{{form.name(size=20,class='form-control')}}
+    <br>
+    {{ form.area.label(class="form-label")}}{{form.area(class='form-control')}}
+    <br>
+    {{ form.num_of_inhabitants.label(class="form-label")}}{{form.num_of_inhabitants(class='form-control')}}
+    <br>
+    {{ form.country.label(class="form-label")}} {{form.country(class='form-control')}}
+    <br>
+    {{form.submit(class="btn btn-success")}}
+</form>
+{% endif %}
+{% endblock %}
