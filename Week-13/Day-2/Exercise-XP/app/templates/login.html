@@ -2,10 +2,6 @@
 
 {% block content %}
 
-{% if form.name.data %}
-<!-- <h1>Thanks for adding {{form.name.data}}!</h1> -->
-{% else %}
-
 <form class='form' method="POST" action="#">
     {{ form.hidden_tag()}}
     {{ form.name.label(class="form-label")}}{{form.name(size=20,class='form-control')}}
@@ -14,5 +10,4 @@
     <br>
     {{form.submit(class="btn btn-success")}}
 </form>
-{% endif %}
 {% endblock %}

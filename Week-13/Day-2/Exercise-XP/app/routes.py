@@ -32,12 +32,14 @@ def login():
 	myForm = login_form()
 	if myForm.is_submitted():
 		this_user = dict(request.form)
-		users = User.query.all()
+		users  = User.query.all()
 		for user in users:
-			if this_user['name'] in user.name and this_user['city'] in user.city:
-				flash(f'You are now logged in {this_user["name"]}')
+			print(user)
+			if this_user['name'].isnumeric() or this_user['city'].isnumeric():
+				flash(f'Please enter strings and not numbers', "error")
+			if this_user['name']  == user.name and this_user['city'] == user.city:
+				flash(f'You are now logged in {this_user["name"]}', "success")
 				return redirect(url_for('home'))
-			else:
-				flash(f'You need to sign up!')
-				return redirect(url_for('add_user_route'))
+		flash(f'You need to sign up!','user does not exist')
+		return redirect(url_for('add_user_route'))
 	return render_template('login.html', form=myForm)
