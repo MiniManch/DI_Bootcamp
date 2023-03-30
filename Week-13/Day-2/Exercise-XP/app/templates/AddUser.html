@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<form class='form' method="POST" action="#">
+    {{ form.hidden_tag()}}
+    {{ form.name.label(class="form-label")}}{{form.name(size=20,class='form-control')}}
+    <br>
+    {{ form.street.label(class="form-label")}}{{form.street(class='form-control')}}
+    <br>
+    {{ form.city.label(class="form-label")}}{{form.city(class='form-control')}}
+    <br>
+    {{ form.zipcode.label(class="form-label")}} {{form.zipcode(class='form-control')}}
+    <br>
+    {{form.submit(class="btn btn-success")}}
+</form>
+{% endblock %}

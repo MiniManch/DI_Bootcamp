@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<div>
+	first block!
+	{% for user in users.query.all() %}
+	<p>{{user}}</p>
+	{% endfor %}
+</div>
+
+<div>
+	second block!
+	{% for user in users.query.all() %}
+	{% if user.city == 'Roscoeview' %}
+	<p>{{user}}</p>
+	{% endif %}
+	{% endfor %}
+</div>
+
+<div>
+	third block!
+	{% for user in users.query.limit(5) %}
+	<p>{{user}}</p>
+	{% endfor %}
+</div>
+
+
+<div>
+	fourth block!
+	{% for user in users.query.filter(users.zipcode.like('5%')) %}
+	<p>{{user}}</p>
+	{% endfor %}
+</div>
+
+
+{% endblock %}
