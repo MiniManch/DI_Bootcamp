@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class = 'pet_header'>
+  <h1>About this Person!</h1>
+  <h3>{{person.name}}</h3>
+  <p><strong>email:</strong> {{person.email}}</p>
+  {% set i = namespace(value=1) %}
+  {% for number in person.phonenumbers %}
+  <p><strong>Phone number {{i.value}}#:</strong> {{number.number}}</p>
+  {% set i.value = i.value + 1 %}
+  {% endfor%}
+  <p><strong>address:</strong> {{person.address}}$</p>
+</header>
+{% endblock %} 
