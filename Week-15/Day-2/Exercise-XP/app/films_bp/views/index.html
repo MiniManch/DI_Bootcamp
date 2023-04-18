@@ -1,0 +1,22 @@
+{% extends 'partials/base.html' %}
+{% include "partials/navbar.html" %}
+
+{% block content %}
+<div class="container mx-auto mt-4">
+  <div class="row">
+    {% for film in films %}
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title ms-5">{{film.title.capitalize()}} BY {% for director in film.director %} {{director.first_name}} {{director.last_name}}{% endfor %}</h5>
+            <p>Date: {{film.release_date}}</p>
+            <p>Category: {% for category in film.categories%} {{category.name}}{% endfor %}</p>
+            <p>Country: {{countries.query.filter_by(id=film.created_in_country).first().name}}</p>
+
+        </div>
+      </div>
+    </div>
+    {% endfor%}
+  </div>
+</div>
+{% endblock %}
