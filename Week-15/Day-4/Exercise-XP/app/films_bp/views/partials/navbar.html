@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+        {% if current_user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('films_bp.index')}}">Home</a>
+        </li>
+        {% if current_user.username == 'admin' %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('films_bp.add_film_func')}}">Add Film</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('films_bp.add_director_func')}}">Add Director</a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('accounts_bp.profile')}}">Profile</a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('accounts_bp.signup')}}">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('accounts_bp.login')}}">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
