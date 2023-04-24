@@ -53,7 +53,7 @@ def add_director_func():
         film  = models.Film.query.filter_by(title=form.film.data).first()
         directors = models.Director.query.filter_by(first_name=form.first_name.data)
         if directors.first() is not None:
-            for director in directors:
+            for director in directors: # please export this code into functions
                 if director.last_name == form.last_name.data:
                     flask.flask(f'Director {film.first_name} {film.last_name} already exists!')
                     return flask.redirect(flask.url_for('films_bp.add_director_func'))
